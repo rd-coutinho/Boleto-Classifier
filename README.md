@@ -1,3 +1,4 @@
 # Boleto-Classifier
 This project is intended to develop a deep learning classifier to recognize if a boleto exist in a given image. The boleto, in Brazil for instance, is a popular form of payment, and with technological advances is now possible to be paid in anywhere (both physical and digitally).
+
 The algorithm was trainned in Keras using a database with images containing boletos and no boletos. The images were put in a standard shape of (192, 136) with batch normalization and relu activation in an architecture of 5 layers with the following number of nodes: 16, 128, 128, 64, 128. Finally, the adam optimizer was chose. To help the algorithm to generalize in new images, was used data augmentation with a configuration of width and height shift, rotation for images containing boletos in a vertical position, as well as brightness and zoom adjustment. The final accuracy after 20 epochs with 578 steps per epoch was 97,8%. 
